@@ -1,6 +1,5 @@
 """Employee pay calculator."""
 """ENTER YOUR SOLUTION HERE!"""
-
 class Employee:
     def __init__(self, name, contract, commission, hours, pay,monthlySal, contractNum, contractPay,bonusCommission):
         self.name = name
@@ -42,18 +41,21 @@ class Employee:
             string += f" and receives a bonus commission of {self.bonusCommission}."
         else:
             string +="."
-        totalPay = get_pay(self)
+        totalPay = self.get_pay()
         string+= f" Their total pay is {totalPay} "   
         return string
             
-        
-        
+
+    
+
+
+       
         
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
 billie = Employee('Billie',"salary", None, None, None,4000,None,None,None)
-print(billie.get_pay(),billie.__str__)
+print(billie.get_pay(),billie.__str__())
 
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
 charlie = Employee('Charlie',"hourly" , None, 100 , 25,None, None,None, None)
